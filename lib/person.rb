@@ -29,6 +29,7 @@ class Person
       else 
           @hygiene = new_hyg
       end
+    
     end 
 
     def happy?
@@ -43,5 +44,22 @@ class Person
       @bank_account += salary
       return 'all about the benjamins'
     end
+
+    def take_bath 
+      self.hygiene += 4 
+      return '♪ Rub-a-dub just relaxing in the tub ♫'
+    end
+
+    def work_out
+        self.hygiene -= 3 
+        self.happiness += 2
+        "♪ another one bites the dust ♫"
+    end
+
+    def call_friend(person)
+        self.happiness += 3
+        person.happiness += 3
+    end
+
 
 end
